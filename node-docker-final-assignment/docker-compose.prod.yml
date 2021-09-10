@@ -1,0 +1,62 @@
+version: '3.4'
+
+services:
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watch_tower
+    restart: 'no'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/timezone:/etc/timezone:ro
+    environment:
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_RUN_ONCE=true
+
+  mongo-ui-svc:
+    image: gtldhawalgandhi/dbgate:dev
+    container_name: '${MONGO_UI_CONTAINER_NAME}'
+    ports:
+      - ${MONGO_UI_HOST_PORT}:3000
+    networks:
+      - app_network
+
+  backend-svc:
+    image: ${BACKEND_IMAGE_NAME}
+    container_name: ${BACKEND_CONTAINER_NAME}
+    env_file:
+      - prod.env
+    environment:
+      REALTIME_APP_HOST: ${REALTIME_CONTAINER_NAME}
+      PORT: ${BACKEND_PORT}
+    ports:
+      - ${BACKEND_PORT}:${BACKEND_PORT}
+    networks:
+      - app_network
+    command: ['node', 'server.js']
+
+  realtime-svc:
+    image: ${REALTIME_IMAGE_NAME}
+    container_name: ${REALTIME_CONTAINER_NAME}
+    environment:
+      PORT: ${REALTIME_PORT}
+    ports:
+      - ${REALTIME_PORT}:${REALTIME_PORT}
+    networks:
+      - app_network
+    command: ['node', 'server.js']
+
+  graph-svc:
+    image: ${GRAPH_IMAGE_NAME}
+    container_name: ${GRAPH_CONTAINER_NAME}
+    environment:
+      PORT: ${GRAPH_PORT}
+    ports:
+      - ${GRAPH_PORT}:${GRAPH_PORT}
+    networks:
+      - app_network
+    command: ['node', 'server.js']
+
+networks:
+  app_network:
+    driver: bridge
+    name: prod_app_network

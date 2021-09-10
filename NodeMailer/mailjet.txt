@@ -1,0 +1,11 @@
+vahibo2419@gameqo.com
+HL4+w=x-5.GEufm
+
+ba525dcb0d4b72db3551c59270a7285c,  Username (API key)
+
+f54f17fda4c71327c722d94cf909c189,  Password (Secret key)
+
+in-v3.mailjet.com,  SMTP Server
+
+Port
+25 or 587 (some providers block port 25)

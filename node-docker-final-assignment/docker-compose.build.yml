@@ -1,0 +1,52 @@
+version: '3.4'
+
+services:
+  backend-svc:
+    image: "${BACKEND_IMAGE_NAME}"
+    build:
+      context: ./
+      target: prod_backend
+      dockerfile: ./Dockerfile
+    networks:
+      - prod_docker_app_network
+    command: ["echo", "build complete"]
+
+  realtime-svc:
+    image: "${REALTIME_IMAGE_NAME}"
+    build:
+      context: ./
+      target: prod_realtime
+      dockerfile: ./Dockerfile
+    networks:
+      - prod_docker_app_network
+    command: ["sh", "-c", "echo \"build complete\""]
+
+  graph-svc:
+    image: "${GRAPH_IMAGE_NAME}"
+    build:
+      context: ./
+      target: prod_graph
+      dockerfile: ./Dockerfile
+    networks:
+      - prod_docker_app_network
+    command: ["echo", "build complete"]
+
+  lint-test:
+    image: lint-test-image
+    build:
+      context: ./
+      target: lint_test
+      dockerfile: ./Dockerfile
+
+  lint:
+    image: lint-image
+    build:
+      context: ./
+      target: lint
+      dockerfile: ./Dockerfile
+
+volumes:
+  prod_mongodb_data:
+
+networks:
+  prod_docker_app_network:

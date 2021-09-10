@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "outDir": "./dist",
+    "target": "es6",
+    // "module": "es2015",
+    "baseUrl": "packages",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@app/backend/*": [
+        "./backend/*"
+      ],
+      "@app/realtime/*": [
+        "./realtime/*"
+      ],
+      "@app/graph/*": [
+        "./graph/*"
+      ],
+      "@app/lib/*": [
+        "./lib/*"
+      ],
+    }
+  },
+  "include": [
+    "./packages/**/*",
+  ]
+}

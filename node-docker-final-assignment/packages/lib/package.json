@@ -1,0 +1,45 @@
+{
+  "name": "@app/lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "esbuild --log-level=error --platform=node --target=node12.20 --minify-whitespace --minify-syntax --bundle --external:mongodb-client-encryption --outdir=build src/**/*.ts src/*.ts",
+    "old-build": "babel . --ignore build -d build"
+  },
+  "files": ["build/"],
+  "nodemonConfig": {
+    "ignore": [
+      "_test_/*",
+      "*.config.*",
+      "*compose.yml",
+      "*dockerfile*",
+      "*ignore*",
+      "*_tests_*",
+      "package.json"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.2.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.13",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/eslint-parser": "^7.12.1",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.4",
+    "babel-jest": "^27.0.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.28.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-security": "^1.4.0"
+  }
+}

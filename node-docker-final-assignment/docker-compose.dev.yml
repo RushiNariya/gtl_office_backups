@@ -1,0 +1,121 @@
+version: '3.4'
+
+services:
+  mongo-ui-svc:
+    image: gtldhawalgandhi/dbgate:dev
+    container_name: '${MONGO_UI_CONTAINER_NAME}'
+    depends_on:
+      - mongo-db-svc
+    ports:
+      - ${MONGO_UI_HOST_PORT}:3000
+    networks:
+      - app_network
+
+  mongo-db-svc:
+    image: mongo:4.4.6-bionic
+    container_name: '${MONGO_DB_CONTAINER_NAME}'
+    env_file:
+      - dev.env
+    ports:
+      - ${MONGO_DB_HOST_PORT}:27017
+    volumes:
+      - app_db_volume:/data/db
+      - ./scripts/mongo-init.sh:/docker-entrypoint-initdb.d/mongo-init.sh:ro
+    networks:
+      - app_network
+
+  backend-svc:
+    image: '${BACKEND_IMAGE_NAME}'
+    container_name: '${BACKEND_CONTAINER_NAME}'
+    build:
+      context: ./
+      target: backend
+      dockerfile: ./Dockerfile
+    env_file:
+      - dev.env
+    environment:
+      REALTIME_APP_HOST: '${REALTIME_CONTAINER_NAME}'
+      PORT: ${BACKEND_PORT}
+    depends_on:
+      - mongo-ui-svc
+    ports:
+      - ${BACKEND_PORT}:${BACKEND_PORT}
+      - ${BACKEND_DEBUG_PORT}:9227
+    volumes:
+      - ./:/work:rw
+      - /work/packages/lib/build
+      - /work/packages/backend/node_modules
+      - /work/node_modules
+    networks:
+      - app_network
+    command: ['yarn', 'dev:run']
+
+  realtime-svc:
+    image: '${REALTIME_IMAGE_NAME}'
+    container_name: '${REALTIME_CONTAINER_NAME}'
+    build:
+      context: ./
+      target: realtime
+      dockerfile: ./Dockerfile
+    environment:
+      PORT: ${REALTIME_PORT}
+    ports:
+      - ${REALTIME_PORT}:${REALTIME_PORT}
+      - ${REALTIME_DEBUG_PORT}:9229
+    volumes:
+      - ./:/work:rw
+      - /work/packages/lib/build
+      - /work/packages/realtime/node_modules
+      - /work/node_modules
+      # - ./:/work:delegated (for MacOS only)
+    networks:
+      - app_network
+    command: ['yarn', 'dev:run:realtime']
+
+  graph-svc:
+    image: '${GRAPH_IMAGE_NAME}'
+    container_name: '${GRAPH_CONTAINER_NAME}'
+    build:
+      context: ./
+      target: graph
+      dockerfile: ./Dockerfile
+    environment:
+      PORT: ${GRAPH_PORT}
+    ports:
+      - ${GRAPH_PORT}:${GRAPH_PORT}
+      - ${GRAPH_DEBUG_PORT}:9228
+    volumes:
+      - ./:/work:rw
+      - /work/packages/lib/build
+      - /work/packages/graph/node_modules
+      - /work/node_modules
+    networks:
+      - app_network
+    command: ['yarn', 'dev:run:graph']
+
+
+  lint-test:
+    image: lint-test-image
+    build:
+      context: ./
+      target: lint_test
+      dockerfile: ./Dockerfile
+
+  lint:
+    image: lint-image
+    build:
+      context: ./
+      target: lint
+      dockerfile: ./Dockerfile
+
+volumes:
+  app_db_volume:
+    driver: local
+    name: dev_mongo_db
+
+networks:
+  app_network:
+    driver: bridge
+    name: dev_app_network
+
+  

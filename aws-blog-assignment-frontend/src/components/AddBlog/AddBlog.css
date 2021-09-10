@@ -1,0 +1,26 @@
+.blog_domain {
+  width: 50%;
+}
+
+.read-more {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.new__blog__name{
+  color: #85a399 !important;
+  border-color: #85a399 !important;
+}
+
+.blog_picture_show{
+  display: none;
+}
+
+.blog_picture_show.active{
+  display: block;
+}

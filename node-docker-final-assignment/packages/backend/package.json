@@ -1,0 +1,60 @@
+{
+  "name": "@app/backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "export-lockfiles": "docker run -it --rm -v ${PWD}:/work -v /work/node_modules -w /work node:12.4.0-alpine /bin/sh -c 'yarn'",
+    "dev:sh": "docker run -it --rm -v ${PWD}:/work -v /work/node_modules -w /work node:12.4.0-alpine /bin/sh -c ",
+    "build": "esbuild --log-level=error --platform=node --target=node12.20 --minify-whitespace --minify-syntax --bundle --external:mongodb-client-encryption --outdir=build src/server.ts",
+    "preprod:run": "yarn workspace @app/backend run build",
+    "prod:run": "node build/server.js",
+    "predev:run": "yarn workspace @app/lib run build",
+    "dev:run": "nodemon --watch src -L -e ts --exec node --inspect -r ts-node/register src/server.ts"
+  },
+  "files": [
+    "build/"
+  ],
+  "nodemonConfig": {
+    "events": {
+      "restart": "yarn workspace @app/lib run build"
+    },
+    "ignore": [
+      "*.config.*",
+      "*compose.yml",
+      "*dockerfile*",
+      "*ignore*",
+      "*_tests_*",
+      "package.json"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "@types/express-fileupload": "^1.1.7",
+    "core-js": "^3.2.1",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-validator": "^6.11.1",
+    "http-terminator": "^3.0.0",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/eslint-parser": "^7.12.1",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.4",
+    "@types/jest": "^26.0.24",
+    "babel-jest": "^27.0.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.28.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-security": "^1.4.0",
+    "jest": "^27.0.4",
+    "nodemon": "^2.0.7"
+  }
+}

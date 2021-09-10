@@ -1,0 +1,11 @@
+{
+  "header": "Suivi des dépenses",
+  "balance": "Votre solde",
+  "income": "Revenu",
+  "expense": "Frais",
+  "history": "Histoire",
+  "emptyList": "Aucune transaction",
+  "AddTransaction":"Ajouter une nouvelle transaction",
+  "inputTransaction": "Transaction",
+  "inputAmount": "Montant"
+}

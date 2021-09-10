@@ -1,0 +1,5 @@
+export const GET_HOSPITAL = 'GET_HOSPITAL';
+export const GET_HOSPITAL_BY_ID = 'GET_HOSPITAL_BY_ID';
+export const ADD_HOSPITAL = 'ADD_HOSPITAL';
+export const EDIT_HOSPITAL = 'EDIT_HOSPITAL';
+export const DELETE_HOSPITAL = 'DELETE_HOSPITAL';

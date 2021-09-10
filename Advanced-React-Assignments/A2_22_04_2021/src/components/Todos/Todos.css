@@ -1,0 +1,29 @@
+.not-found{
+  background-color:white;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.todolist{
+  background-color:#d1eced;
+  border-radius: 20px;
+  height: 80vh;
+  width: 95%;
+  max-width: 800px;
+  margin: auto;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.todolist::-webkit-scrollbar {
+  width: 7px;
+}
+.todolist::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.todolist::-webkit-scrollbar-thumb {
+  background-color: #a5b8be;
+  border-radius: 15px;
+}

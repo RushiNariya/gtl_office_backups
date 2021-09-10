@@ -1,0 +1,13 @@
+{
+  "header": "Onkosten Tracker",
+  "balance": "Je balans",
+  "income": "Inkomen",
+  "expense": "Kosten",
+  "history": "Geschiedenis",
+  "emptyList": "Geen transacties",
+  "AddTransaction":"Nieuwe transactie toevoegen",
+  "inputTransaction": "Transactie",
+  "inputAmount": "Bedrag",
+  "errorRequired": "Voer de tekst- en bedragvelden in.",
+  "errorPositiveAmount": "Voer een positief bedrag in."
+}

@@ -1,0 +1,13 @@
+{
+  "header": "Suivi des dépenses",
+  "balance": "Votre solde",
+  "income": "Revenu",
+  "expense": "Frais",
+  "history": "Histoire",
+  "emptyList": "Aucune transaction",
+  "AddTransaction":"Ajouter une nouvelle transaction",
+  "inputTransaction": "Transaction",
+  "inputAmount": "Montant",
+  "errorRequired": "Veuillez saisir les champs de texte et de montant.",
+  "errorPositiveAmount": "Veuillez saisir un montant positif."
+}

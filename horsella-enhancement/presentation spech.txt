@@ -1,0 +1,39 @@
+Slide 1
+
+Good Afternoon everyone, Myself <Name> and we are here to give a brief description of our project "Horsella".
+
+Horse racing and breeding are global industries worth millions of dollars. Still many of the horse owners use chalk boards for managing their horses. Through Horsella we attempt to provide them a nice, easy and scalable solution for horse management.
+
+Slide 2
+
+Horsella is a platform where horse owners and other related organizations can come across each other and access different services for welfare of their horses.
+
+Training and Breeding centers can register with us. Users can browse through the list and contact them for training horses or enrolling them in breeding center.
+
+Horse owners can manage their horses by making a horse profile. They can also edit old profiles or delete them if needed.
+
+They get easy access to all the racing information required for participation,  which can also be done through our website by choosing any horse they have added in their account. After the race is completed, users can view results for any specific race.
+
+We keep our users updated on latest news regarding horses and it's related activities.
+
+Slide 3
+
+Technologies we have used include ReactJS for dynamic frontend connecting with NodeJS acting as a server and postgreSQL for storing all the data.
+
+We used Github for version controlling, and postman for testing our API routes. Finally we have hosted the website on Heroku.
+
+Slide 4
+
+The image behind me / This slide describes a basic flow of our application. The user submits the login credentials, the request is then sent to backend for processing. From there user's data is retrieved from the database and authenticated. If credentials are found valid, respective view is sent back as a response, otherwise error is shown.
+
+Slide 5
+
+The project is divided into two use cases, one for admin user and other for non-admin users.
+
+Admin users get to work with thier own dashboard for managing CRUD operations on races, training and breeding centers. They can also see queries submitted by vistors and other users.
+
+Non-admin users can view details about training and breeding centers. Adding and managing of their horses can be done after which they can participate in any upcoming races.
+
+Slide 6
+
+And now i would request <Name> to giva a live demo of our project.

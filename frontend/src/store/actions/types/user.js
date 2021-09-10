@@ -1,0 +1,9 @@
+export const LOGIN_USER = 'LOGIN_USER';
+export const LOGOUT_USER = 'LOGOUT_USER';
+export const REGISTER_USER = 'REGISTER_USER';
+export const SET_ERROR = 'SET_ERROR';
+export const RESET_ERROR = 'RESET_ERROR';
+export const APPLY_FORGOT_PASSWORD = 'APPLY_FORGOT_PASSWORD';
+export const CHANGE_PASSWORD = 'CHANGE_PASSWORD';
+export const REFRESH_STATE = 'REFRESH_STATE';
+export const SET_SUCCESS = 'SET_SUCCESS';

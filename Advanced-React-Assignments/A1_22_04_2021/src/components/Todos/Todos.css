@@ -1,0 +1,20 @@
+.not-found{
+  background-color:white;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.todolist{
+  background-color:#d1eced;
+  border-radius: 20px;
+  height: 80vh;
+  width: 95%;
+  max-width: 800px;
+  margin: auto;
+  overflow: scroll;
+}
+
+.todolist::-webkit-scrollbar {
+  display: none;
+}

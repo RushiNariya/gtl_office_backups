@@ -1,0 +1,4 @@
+{
+  "title": "Exemple de traduction React",
+  "description": "React (également connu sous le nom de React.js ou ReactJS) est une bibliothèque JavaScript open-source [3] pour la création d'interfaces utilisateur ou de composants d'interface utilisateur. Il est maintenu par Facebook et une communauté de développeurs individuels et d'entreprises. [4] [5] [6] React peut être utilisé comme base dans le développement d'applications monopage ou mobiles. Cependant, React ne concerne que le rendu des données vers le DOM, et donc la création d'applications React nécessite généralement l'utilisation de bibliothèques supplémentaires pour la gestion de l'état et le routage. [7] [8] Redux [9] et React Router [10] sont des exemples respectifs de telles bibliothèques"
+}
