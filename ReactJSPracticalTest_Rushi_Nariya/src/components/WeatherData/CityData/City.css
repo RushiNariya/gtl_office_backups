@@ -1,0 +1,170 @@
+.city {
+  display: flow-root;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  margin: 10px auto;
+  padding: 10px 35px 10px 15px;
+  box-sizing: border-box;
+  box-shadow: 0 1/8rem 1/8rem 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(8, 7, 7, 0);
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .city {
+    padding: 10px 45px 10px 25px;
+  }
+}
+
+.city::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+city:hover {
+  border-color: #ddd;
+  box-shadow: 0 1/8rem 1/8rem 0 rgba(0, 0, 0, 0.12);
+}
+@media (min-width: 768px) {
+  city:hover {
+    transform: scale(1.05);
+  }
+}
+
+.city .column-1 {
+  display: inline-block;
+  float: left;
+  width: calc(100% - 60px);
+  text-align: left;
+}
+
+.city .column-2 {
+  display: inline-block;
+  float: right;
+  width: 60px;
+  text-align: right;
+}
+
+.city .name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  opacity: 1;
+}
+
+@media (min-width: 760px) {
+  .city .name {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 460px) {
+  .city .name {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 460px) {
+  .city .name {
+    font-size: 20px;
+  }
+}
+
+.flag {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 460px) {
+  .flat {
+    height: 22px;
+    width: 22px;
+  }
+}
+
+.descr {
+  font-size: 16px;
+}
+
+@media (max-width: 460px) {
+  .descr {
+    font-size: 14px;
+  }
+}
+
+.temp {
+  position: relative;
+}
+.temp .units {
+  font-size: 20px;
+  color: #fff;
+  line-height: 80px;
+  font-weight: 600;
+}
+
+@media (max-width: 460px) {
+  .temp .units {
+    font-size: 16px;
+    line-height: 80px;
+  }
+}
+.temp .metrics {
+  font-family: 'Roboto', 'Avenir', Helvetica, Arial, sans-serif;
+  width: 21px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 300;
+  position: absolute;
+  top: 25px;
+}
+
+.cancel-button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  outline: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  position: absolute;
+  right: 7px;
+  top: 0px;
+}
+
+.cancel-button .icon-cancel {
+  font-size: 24px;
+  color: #000;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+
+.cancel-button:hover .icon-cancel {
+  opacity: 1;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+}
+.modal-dialog {
+  max-width: 100% !important;
+}
+.modal-content {
+  background-image: url('../../../assets/jungle.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

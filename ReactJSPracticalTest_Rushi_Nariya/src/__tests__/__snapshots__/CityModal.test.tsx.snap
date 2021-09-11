@@ -1,0 +1,1195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the CityModal component 1`] = `
+<GlobalProvider
+  initialState={
+    Object {
+      "city": Array [],
+      "data": Object {
+        "city": "surat",
+        "clouds": 23,
+        "country": "IN",
+        "description": "cloud heavy rain",
+        "icon": "10d",
+        "latitude": 32.04,
+        "longitude": 38,
+        "wind": 34,
+      },
+      "error": "",
+      "errorHandler": [Function],
+      "removeCityHandler": [Function],
+      "resetSetErrorHandler": [Function],
+      "searchByCityHandler": [Function],
+      "searchCityHandler": [Function],
+      "setWeatherDataHandler": [Function],
+    }
+  }
+>
+  <CityModal
+    cityData={
+      Object {
+        "country": "IN",
+        "icon": "50d",
+        "latitude": 21.0439,
+        "longitude": 74.5086,
+        "maxTemp": 31.04,
+        "minTemp": 33.04,
+        "name": "Pune",
+        "temp": 32.04,
+      }
+    }
+    setShow={[Function]}
+    show={true}
+  >
+    <div
+      className="modal"
+    >
+      <Modal
+        animation={true}
+        autoFocus={true}
+        backdrop={true}
+        dialogAs={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          }
+        }
+        enforceFocus={true}
+        fullscreen="xxl-down"
+        keyboard={true}
+        onHide={[Function]}
+        restoreFocus={true}
+        show={true}
+      >
+        <Modal
+          autoFocus={true}
+          backdrop={true}
+          backdropTransition={[Function]}
+          containerClassName="modal-open"
+          enforceFocus={true}
+          keyboard={true}
+          manager={
+            BootstrapModalManager {
+              "containers": Array [
+                <body
+                  class="modal-open"
+                  style="padding-right: 0px;"
+                >
+                  <div
+                    class="fade modal-backdrop show"
+                  />
+                  <div
+                    aria-modal="true"
+                    class="fade modal show"
+                    role="dialog"
+                    style="display: block;"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="modal-dialog"
+                      fullscreen="xxl-down"
+                    >
+                      <div
+                        class="modal-content"
+                      >
+                        <div
+                          class="modal-header"
+                        >
+                          <div
+                            class="modal-title h4"
+                          />
+                          <button
+                            class="close"
+                            type="button"
+                          >
+                            <span
+                              aria-hidden="true"
+                            >
+                              ×
+                            </span>
+                            <span
+                              class="sr-only"
+                            >
+                              Close
+                            </span>
+                          </button>
+                        </div>
+                        <div
+                          class="modal-body"
+                        >
+                          <main
+                            class="main-container"
+                          >
+                            <div
+                              class="location-and-date"
+                            >
+                              <h1
+                                class="location-and-date__location"
+                              >
+                                surat
+                                , 
+                                IN
+                              </h1>
+                              <div>
+                                Saturday, July 24th 2021
+                              </div>
+                            </div>
+                            <div
+                              class="current-temperature"
+                            >
+                              <div
+                                class="current-temperature__icon-container"
+                              >
+                                <img
+                                  class="current-temperature__icon"
+                                  src="http://openweathermap.org/img/wn/10d@4x.png"
+                                />
+                              </div>
+                              <div
+                                class="current-temperature__content-container"
+                              >
+                                <div
+                                  class="current-temperature__value"
+                                >
+                                  <span
+                                    class="temp__degree"
+                                  >
+                                    °C
+                                  </span>
+                                </div>
+                                <div
+                                  class="current-temperature__summary"
+                                >
+                                  cloud heavy rain
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="current-stats"
+                            >
+                              <div>
+                                <div
+                                  class="current-stats__value"
+                                >
+                                  °C
+                                </div>
+                                <div
+                                  class="current-stats__label"
+                                >
+                                  High
+                                </div>
+                                <div
+                                  class="current-stats__value"
+                                >
+                                  °C
+                                </div>
+                                <div
+                                  class="current-stats__label"
+                                >
+                                  Low
+                                </div>
+                              </div>
+                              <div>
+                                <div
+                                  class="current-stats__value"
+                                >
+                                  34
+                                  mtr/sec
+                                </div>
+                                <div
+                                  class="current-stats__label"
+                                >
+                                  Wind
+                                </div>
+                                <div
+                                  class="current-stats__value"
+                                >
+                                  %
+                                </div>
+                                <div
+                                  class="current-stats__label"
+                                >
+                                  Humidity
+                                </div>
+                              </div>
+                              <div>
+                                <div
+                                  class="current-stats__value"
+                                >
+                                  03:53 PM
+                                </div>
+                                <div
+                                  class="current-stats__label"
+                                >
+                                  Sunrise
+                                </div>
+                                <div
+                                  class="current-stats__value"
+                                >
+                                  03:53 PM
+                                </div>
+                                <div
+                                  class="current-stats__label"
+                                >
+                                  Sunset
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="weather-by-hour"
+                            >
+                              <h2
+                                class="weather-by-hour__heading"
+                              >
+                                Todays weather
+                              </h2>
+                              <div
+                                class="weather-by-hour__container"
+                              />
+                            </div>
+                            <div
+                              class="next-5-days"
+                            >
+                              <h2
+                                class="next-5-days__heading"
+                              >
+                                Next 7 days
+                              </h2>
+                              <div
+                                class="next-5-days__container"
+                              />
+                            </div>
+                          </main>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </body>,
+              ],
+              "data": Array [
+                Object {
+                  "classes": Array [
+                    "modal-open",
+                  ],
+                  "modals": Array [
+                    Object {
+                      "add": [Function],
+                      "backdrop": <div
+                        class="fade modal-backdrop show"
+                      />,
+                      "dialog": <div
+                        aria-modal="true"
+                        class="fade modal show"
+                        role="dialog"
+                        style="display: block;"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog"
+                          fullscreen="xxl-down"
+                        >
+                          <div
+                            class="modal-content"
+                          >
+                            <div
+                              class="modal-header"
+                            >
+                              <div
+                                class="modal-title h4"
+                              />
+                              <button
+                                class="close"
+                                type="button"
+                              >
+                                <span
+                                  aria-hidden="true"
+                                >
+                                  ×
+                                </span>
+                                <span
+                                  class="sr-only"
+                                >
+                                  Close
+                                </span>
+                              </button>
+                            </div>
+                            <div
+                              class="modal-body"
+                            >
+                              <main
+                                class="main-container"
+                              >
+                                <div
+                                  class="location-and-date"
+                                >
+                                  <h1
+                                    class="location-and-date__location"
+                                  >
+                                    surat
+                                    , 
+                                    IN
+                                  </h1>
+                                  <div>
+                                    Saturday, July 24th 2021
+                                  </div>
+                                </div>
+                                <div
+                                  class="current-temperature"
+                                >
+                                  <div
+                                    class="current-temperature__icon-container"
+                                  >
+                                    <img
+                                      class="current-temperature__icon"
+                                      src="http://openweathermap.org/img/wn/10d@4x.png"
+                                    />
+                                  </div>
+                                  <div
+                                    class="current-temperature__content-container"
+                                  >
+                                    <div
+                                      class="current-temperature__value"
+                                    >
+                                      <span
+                                        class="temp__degree"
+                                      >
+                                        °C
+                                      </span>
+                                    </div>
+                                    <div
+                                      class="current-temperature__summary"
+                                    >
+                                      cloud heavy rain
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="current-stats"
+                                >
+                                  <div>
+                                    <div
+                                      class="current-stats__value"
+                                    >
+                                      °C
+                                    </div>
+                                    <div
+                                      class="current-stats__label"
+                                    >
+                                      High
+                                    </div>
+                                    <div
+                                      class="current-stats__value"
+                                    >
+                                      °C
+                                    </div>
+                                    <div
+                                      class="current-stats__label"
+                                    >
+                                      Low
+                                    </div>
+                                  </div>
+                                  <div>
+                                    <div
+                                      class="current-stats__value"
+                                    >
+                                      34
+                                      mtr/sec
+                                    </div>
+                                    <div
+                                      class="current-stats__label"
+                                    >
+                                      Wind
+                                    </div>
+                                    <div
+                                      class="current-stats__value"
+                                    >
+                                      %
+                                    </div>
+                                    <div
+                                      class="current-stats__label"
+                                    >
+                                      Humidity
+                                    </div>
+                                  </div>
+                                  <div>
+                                    <div
+                                      class="current-stats__value"
+                                    >
+                                      03:53 PM
+                                    </div>
+                                    <div
+                                      class="current-stats__label"
+                                    >
+                                      Sunrise
+                                    </div>
+                                    <div
+                                      class="current-stats__value"
+                                    >
+                                      03:53 PM
+                                    </div>
+                                    <div
+                                      class="current-stats__label"
+                                    >
+                                      Sunset
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="weather-by-hour"
+                                >
+                                  <h2
+                                    class="weather-by-hour__heading"
+                                  >
+                                    Todays weather
+                                  </h2>
+                                  <div
+                                    class="weather-by-hour__container"
+                                  />
+                                </div>
+                                <div
+                                  class="next-5-days"
+                                >
+                                  <h2
+                                    class="next-5-days__heading"
+                                  >
+                                    Next 7 days
+                                  </h2>
+                                  <div
+                                    class="next-5-days__container"
+                                  />
+                                </div>
+                              </main>
+                            </div>
+                          </div>
+                        </div>
+                      </div>,
+                      "isTopModal": [Function],
+                      "remove": [Function],
+                      "setBackdropRef": [Function],
+                      "setDialogRef": [Function],
+                    },
+                  ],
+                  "overflowing": true,
+                  "style": Object {
+                    "overflow": "",
+                    "paddingRight": "",
+                  },
+                },
+              ],
+              "handleContainerOverflow": true,
+              "hideSiblingNodes": true,
+              "modals": Array [
+                Object {
+                  "add": [Function],
+                  "backdrop": <div
+                    class="fade modal-backdrop show"
+                  />,
+                  "dialog": <div
+                    aria-modal="true"
+                    class="fade modal show"
+                    role="dialog"
+                    style="display: block;"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="modal-dialog"
+                      fullscreen="xxl-down"
+                    >
+                      <div
+                        class="modal-content"
+                      >
+                        <div
+                          class="modal-header"
+                        >
+                          <div
+                            class="modal-title h4"
+                          />
+                          <button
+                            class="close"
+                            type="button"
+                          >
+                            <span
+                              aria-hidden="true"
+                            >
+                              ×
+                            </span>
+                            <span
+                              class="sr-only"
+                            >
+                              Close
+                            </span>
+                          </button>
+                        </div>
+                        <div
+                          class="modal-body"
+                        >
+                          <main
+                            class="main-container"
+                          >
+                            <div
+                              class="location-and-date"
+                            >
+                              <h1
+                                class="location-and-date__location"
+                              >
+                                surat
+                                , 
+                                IN
+                              </h1>
+                              <div>
+                                Saturday, July 24th 2021
+                              </div>
+                            </div>
+                            <div
+                              class="current-temperature"
+                            >
+                              <div
+                                class="current-temperature__icon-container"
+                              >
+                                <img
+                                  class="current-temperature__icon"
+                                  src="http://openweathermap.org/img/wn/10d@4x.png"
+                                />
+                              </div>
+                              <div
+                                class="current-temperature__content-container"
+                              >
+                                <div
+                                  class="current-temperature__value"
+                                >
+                                  <span
+                                    class="temp__degree"
+                                  >
+                                    °C
+                                  </span>
+                                </div>
+                                <div
+                                  class="current-temperature__summary"
+                                >
+                                  cloud heavy rain
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="current-stats"
+                            >
+                              <div>
+                                <div
+                                  class="current-stats__value"
+                                >
+                                  °C
+                                </div>
+                                <div
+                                  class="current-stats__label"
+                                >
+                                  High
+                                </div>
+                                <div
+                                  class="current-stats__value"
+                                >
+                                  °C
+                                </div>
+                                <div
+                                  class="current-stats__label"
+                                >
+                                  Low
+                                </div>
+                              </div>
+                              <div>
+                                <div
+                                  class="current-stats__value"
+                                >
+                                  34
+                                  mtr/sec
+                                </div>
+                                <div
+                                  class="current-stats__label"
+                                >
+                                  Wind
+                                </div>
+                                <div
+                                  class="current-stats__value"
+                                >
+                                  %
+                                </div>
+                                <div
+                                  class="current-stats__label"
+                                >
+                                  Humidity
+                                </div>
+                              </div>
+                              <div>
+                                <div
+                                  class="current-stats__value"
+                                >
+                                  03:53 PM
+                                </div>
+                                <div
+                                  class="current-stats__label"
+                                >
+                                  Sunrise
+                                </div>
+                                <div
+                                  class="current-stats__value"
+                                >
+                                  03:53 PM
+                                </div>
+                                <div
+                                  class="current-stats__label"
+                                >
+                                  Sunset
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="weather-by-hour"
+                            >
+                              <h2
+                                class="weather-by-hour__heading"
+                              >
+                                Todays weather
+                              </h2>
+                              <div
+                                class="weather-by-hour__container"
+                              />
+                            </div>
+                            <div
+                              class="next-5-days"
+                            >
+                              <h2
+                                class="next-5-days__heading"
+                              >
+                                Next 7 days
+                              </h2>
+                              <div
+                                class="next-5-days__container"
+                              />
+                            </div>
+                          </main>
+                        </div>
+                      </div>
+                    </div>
+                  </div>,
+                  "isTopModal": [Function],
+                  "remove": [Function],
+                  "setBackdropRef": [Function],
+                  "setDialogRef": [Function],
+                },
+              ],
+              "scrollbarSize": 0,
+            }
+          }
+          onEnter={[Function]}
+          onEntering={[Function]}
+          onEscapeKeyDown={[Function]}
+          onExit={[Function]}
+          onExited={[Function]}
+          onHide={[Function]}
+          renderBackdrop={[Function]}
+          renderDialog={[Function]}
+          restoreFocus={true}
+          show={true}
+          transition={[Function]}
+        >
+          <Portal
+            containerInfo={
+              <body
+                class="modal-open"
+                style="padding-right: 0px;"
+              >
+                <div
+                  class="fade modal-backdrop show"
+                />
+                <div
+                  aria-modal="true"
+                  class="fade modal show"
+                  role="dialog"
+                  style="display: block;"
+                  tabindex="-1"
+                >
+                  <div
+                    class="modal-dialog"
+                    fullscreen="xxl-down"
+                  >
+                    <div
+                      class="modal-content"
+                    >
+                      <div
+                        class="modal-header"
+                      >
+                        <div
+                          class="modal-title h4"
+                        />
+                        <button
+                          class="close"
+                          type="button"
+                        >
+                          <span
+                            aria-hidden="true"
+                          >
+                            ×
+                          </span>
+                          <span
+                            class="sr-only"
+                          >
+                            Close
+                          </span>
+                        </button>
+                      </div>
+                      <div
+                        class="modal-body"
+                      >
+                        <main
+                          class="main-container"
+                        >
+                          <div
+                            class="location-and-date"
+                          >
+                            <h1
+                              class="location-and-date__location"
+                            >
+                              surat
+                              , 
+                              IN
+                            </h1>
+                            <div>
+                              Saturday, July 24th 2021
+                            </div>
+                          </div>
+                          <div
+                            class="current-temperature"
+                          >
+                            <div
+                              class="current-temperature__icon-container"
+                            >
+                              <img
+                                class="current-temperature__icon"
+                                src="http://openweathermap.org/img/wn/10d@4x.png"
+                              />
+                            </div>
+                            <div
+                              class="current-temperature__content-container"
+                            >
+                              <div
+                                class="current-temperature__value"
+                              >
+                                <span
+                                  class="temp__degree"
+                                >
+                                  °C
+                                </span>
+                              </div>
+                              <div
+                                class="current-temperature__summary"
+                              >
+                                cloud heavy rain
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="current-stats"
+                          >
+                            <div>
+                              <div
+                                class="current-stats__value"
+                              >
+                                °C
+                              </div>
+                              <div
+                                class="current-stats__label"
+                              >
+                                High
+                              </div>
+                              <div
+                                class="current-stats__value"
+                              >
+                                °C
+                              </div>
+                              <div
+                                class="current-stats__label"
+                              >
+                                Low
+                              </div>
+                            </div>
+                            <div>
+                              <div
+                                class="current-stats__value"
+                              >
+                                34
+                                mtr/sec
+                              </div>
+                              <div
+                                class="current-stats__label"
+                              >
+                                Wind
+                              </div>
+                              <div
+                                class="current-stats__value"
+                              >
+                                %
+                              </div>
+                              <div
+                                class="current-stats__label"
+                              >
+                                Humidity
+                              </div>
+                            </div>
+                            <div>
+                              <div
+                                class="current-stats__value"
+                              >
+                                03:53 PM
+                              </div>
+                              <div
+                                class="current-stats__label"
+                              >
+                                Sunrise
+                              </div>
+                              <div
+                                class="current-stats__value"
+                              >
+                                03:53 PM
+                              </div>
+                              <div
+                                class="current-stats__label"
+                              >
+                                Sunset
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="weather-by-hour"
+                          >
+                            <h2
+                              class="weather-by-hour__heading"
+                            >
+                              Todays weather
+                            </h2>
+                            <div
+                              class="weather-by-hour__container"
+                            />
+                          </div>
+                          <div
+                            class="next-5-days"
+                          >
+                            <h2
+                              class="next-5-days__heading"
+                            >
+                              Next 7 days
+                            </h2>
+                            <div
+                              class="next-5-days__container"
+                            />
+                          </div>
+                        </main>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </body>
+            }
+          >
+            <BackdropTransition
+              appear={true}
+              in={true}
+            >
+              <Fade
+                appear={true}
+                in={true}
+                mountOnEnter={false}
+                timeout={null}
+                unmountOnExit={false}
+              >
+                <Transition
+                  addEndListener={[Function]}
+                  appear={true}
+                  enter={true}
+                  exit={true}
+                  in={true}
+                  mountOnEnter={false}
+                  onEnter={[Function]}
+                  onEntered={[Function]}
+                  onEntering={[Function]}
+                  onExit={[Function]}
+                  onExited={[Function]}
+                  onExiting={[Function]}
+                  timeout={null}
+                  unmountOnExit={false}
+                >
+                  <div
+                    className="fade modal-backdrop show"
+                    onClick={[Function]}
+                  />
+                </Transition>
+              </Fade>
+            </BackdropTransition>
+            <DialogTransition
+              appear={true}
+              in={true}
+              onEnter={[Function]}
+              onEntering={[Function]}
+              onExit={[Function]}
+              onExited={[Function]}
+              unmountOnExit={true}
+            >
+              <Fade
+                appear={true}
+                in={true}
+                mountOnEnter={false}
+                onEnter={[Function]}
+                onEntering={[Function]}
+                onExit={[Function]}
+                onExited={[Function]}
+                timeout={null}
+                unmountOnExit={true}
+              >
+                <Transition
+                  addEndListener={[Function]}
+                  appear={true}
+                  enter={true}
+                  exit={true}
+                  in={true}
+                  mountOnEnter={false}
+                  onEnter={[Function]}
+                  onEntered={[Function]}
+                  onEntering={[Function]}
+                  onExit={[Function]}
+                  onExited={[Function]}
+                  onExiting={[Function]}
+                  timeout={null}
+                  unmountOnExit={true}
+                >
+                  <div
+                    aria-modal={true}
+                    className="fade modal show"
+                    onClick={[Function]}
+                    onMouseUp={[Function]}
+                    role="dialog"
+                    style={
+                      Object {
+                        "paddingLeft": undefined,
+                        "paddingRight": undefined,
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <ModalDialog
+                      fullscreen="xxl-down"
+                      onMouseDown={[Function]}
+                    >
+                      <div
+                        className="modal-dialog"
+                        fullscreen="xxl-down"
+                        onMouseDown={[Function]}
+                      >
+                        <div
+                          className="modal-content"
+                        >
+                          <ModalHeader
+                            closeButton={true}
+                            closeLabel="Close"
+                          >
+                            <div
+                              className="modal-header"
+                            >
+                              <ModalTitle>
+                                <ForwardRef
+                                  className="modal-title"
+                                >
+                                  <div
+                                    className="modal-title h4"
+                                  />
+                                </ForwardRef>
+                              </ModalTitle>
+                              <CloseButton
+                                label="Close"
+                                onClick={[Function]}
+                              >
+                                <button
+                                  className="close"
+                                  onClick={[Function]}
+                                  type="button"
+                                >
+                                  <span
+                                    aria-hidden="true"
+                                  >
+                                    ×
+                                  </span>
+                                  <span
+                                    className="sr-only"
+                                  >
+                                    Close
+                                  </span>
+                                </button>
+                              </CloseButton>
+                            </div>
+                          </ModalHeader>
+                          <ModalBody>
+                            <div
+                              className="modal-body"
+                            >
+                              <main
+                                className="main-container"
+                              >
+                                <CurrentData>
+                                  <div
+                                    className="location-and-date"
+                                  >
+                                    <h1
+                                      className="location-and-date__location"
+                                    >
+                                      surat
+                                      , 
+                                      IN
+                                    </h1>
+                                    <div>
+                                      Saturday, July 24th 2021
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="current-temperature"
+                                  >
+                                    <div
+                                      className="current-temperature__icon-container"
+                                    >
+                                      <img
+                                        className="current-temperature__icon"
+                                        src="http://openweathermap.org/img/wn/10d@4x.png"
+                                      />
+                                    </div>
+                                    <div
+                                      className="current-temperature__content-container"
+                                    >
+                                      <div
+                                        className="current-temperature__value"
+                                      >
+                                        <span
+                                          className="temp__degree"
+                                        >
+                                          °C
+                                        </span>
+                                      </div>
+                                      <div
+                                        className="current-temperature__summary"
+                                      >
+                                        cloud heavy rain
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="current-stats"
+                                  >
+                                    <div>
+                                      <div
+                                        className="current-stats__value"
+                                      >
+                                        °C
+                                      </div>
+                                      <div
+                                        className="current-stats__label"
+                                      >
+                                        High
+                                      </div>
+                                      <div
+                                        className="current-stats__value"
+                                      >
+                                        °C
+                                      </div>
+                                      <div
+                                        className="current-stats__label"
+                                      >
+                                        Low
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <div
+                                        className="current-stats__value"
+                                      >
+                                        34
+                                        mtr/sec
+                                      </div>
+                                      <div
+                                        className="current-stats__label"
+                                      >
+                                        Wind
+                                      </div>
+                                      <div
+                                        className="current-stats__value"
+                                      >
+                                        %
+                                      </div>
+                                      <div
+                                        className="current-stats__label"
+                                      >
+                                        Humidity
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <div
+                                        className="current-stats__value"
+                                      >
+                                        03:53 PM
+                                      </div>
+                                      <div
+                                        className="current-stats__label"
+                                      >
+                                        Sunrise
+                                      </div>
+                                      <div
+                                        className="current-stats__value"
+                                      >
+                                        03:53 PM
+                                      </div>
+                                      <div
+                                        className="current-stats__label"
+                                      >
+                                        Sunset
+                                      </div>
+                                    </div>
+                                  </div>
+                                </CurrentData>
+                                <HourlyData>
+                                  <div
+                                    className="weather-by-hour"
+                                  >
+                                    <h2
+                                      className="weather-by-hour__heading"
+                                    >
+                                      Todays weather
+                                    </h2>
+                                    <div
+                                      className="weather-by-hour__container"
+                                    />
+                                  </div>
+                                </HourlyData>
+                                <DailyData>
+                                  <div
+                                    className="next-5-days"
+                                  >
+                                    <h2
+                                      className="next-5-days__heading"
+                                    >
+                                      Next 7 days
+                                    </h2>
+                                    <div
+                                      className="next-5-days__container"
+                                    />
+                                  </div>
+                                </DailyData>
+                              </main>
+                            </div>
+                          </ModalBody>
+                        </div>
+                      </div>
+                    </ModalDialog>
+                  </div>
+                </Transition>
+              </Fade>
+            </DialogTransition>
+          </Portal>
+        </Modal>
+      </Modal>
+    </div>
+  </CityModal>
+</GlobalProvider>
+`;

@@ -1,0 +1,357 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Case For AppTitle renders the CityList component 1`] = `
+<GlobalProvider
+  initialState={
+    Object {
+      "city": Array [
+        Object {
+          "country": "IN",
+          "icon": "50d",
+          "latitude": 23.0439,
+          "longitude": 72.5086,
+          "maxTemp": 31.04,
+          "minTemp": 31.04,
+          "name": "Sarkhej",
+          "temp": 31.04,
+        },
+        Object {
+          "country": "IN",
+          "icon": "50d",
+          "latitude": 21.0439,
+          "longitude": 74.5086,
+          "maxTemp": 31.04,
+          "minTemp": 33.04,
+          "name": "Pune",
+          "temp": 32.04,
+        },
+      ],
+      "data": Object {},
+      "error": "",
+      "errorHandler": [Function],
+      "removeCityHandler": [Function],
+      "resetSetErrorHandler": [Function],
+      "searchByCityHandler": [Function],
+      "searchCityHandler": [Function],
+      "setWeatherDataHandler": [Function],
+    }
+  }
+>
+  <WeatherData>
+    <ul
+      className="city-list"
+    >
+      <li
+        className="city-element"
+        key="Sarkhej"
+      >
+        <City
+          cityData={
+            Object {
+              "country": "IN",
+              "icon": "50d",
+              "latitude": 23.0439,
+              "longitude": 72.5086,
+              "maxTemp": 31.04,
+              "minTemp": 31.04,
+              "name": "Sarkhej",
+              "temp": 31.04,
+            }
+          }
+        >
+          <article
+            className="city"
+            onClick={[Function]}
+          >
+            <div
+              className="column-1"
+            >
+              <div
+                className="name"
+              >
+                Sarkhej
+                <img
+                  className="flag"
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                />
+              </div>
+            </div>
+            <div
+              className="column-2"
+            >
+              <div
+                className="temp"
+              >
+                <span
+                  className="units"
+                >
+                  31.04
+                </span>
+                <span
+                  className="metrics"
+                >
+                  °C
+                </span>
+              </div>
+            </div>
+            <button
+              className="cancel-button"
+              onClick={[Function]}
+            >
+              <p
+                className="icon-cancel"
+              >
+                x
+              </p>
+            </button>
+          </article>
+        </City>
+      </li>
+      <li
+        className="city-element"
+        key="Pune"
+      >
+        <City
+          cityData={
+            Object {
+              "country": "IN",
+              "icon": "50d",
+              "latitude": 21.0439,
+              "longitude": 74.5086,
+              "maxTemp": 31.04,
+              "minTemp": 33.04,
+              "name": "Pune",
+              "temp": 32.04,
+            }
+          }
+        >
+          <article
+            className="city"
+            onClick={[Function]}
+          >
+            <div
+              className="column-1"
+            >
+              <div
+                className="name"
+              >
+                Pune
+                <img
+                  className="flag"
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                />
+              </div>
+            </div>
+            <div
+              className="column-2"
+            >
+              <div
+                className="temp"
+              >
+                <span
+                  className="units"
+                >
+                  32.04
+                </span>
+                <span
+                  className="metrics"
+                >
+                  °C
+                </span>
+              </div>
+            </div>
+            <button
+              className="cancel-button"
+              onClick={[Function]}
+            >
+              <p
+                className="icon-cancel"
+              >
+                x
+              </p>
+            </button>
+          </article>
+        </City>
+      </li>
+    </ul>
+  </WeatherData>
+</GlobalProvider>
+`;
+
+exports[`Test Case For CityList Component renders the CityList component 1`] = `
+<GlobalProvider
+  initialState={
+    Object {
+      "city": Array [
+        Object {
+          "country": "IN",
+          "icon": "50d",
+          "latitude": 23.0439,
+          "longitude": 72.5086,
+          "maxTemp": 31.04,
+          "minTemp": 31.04,
+          "name": "Sarkhej",
+          "temp": 31.04,
+        },
+        Object {
+          "country": "IN",
+          "icon": "50d",
+          "latitude": 21.0439,
+          "longitude": 74.5086,
+          "maxTemp": 31.04,
+          "minTemp": 33.04,
+          "name": "Pune",
+          "temp": 32.04,
+        },
+      ],
+      "data": Object {},
+      "error": "",
+      "errorHandler": [Function],
+      "removeCityHandler": [Function],
+      "resetSetErrorHandler": [Function],
+      "searchByCityHandler": [Function],
+      "searchCityHandler": [Function],
+      "setWeatherDataHandler": [Function],
+    }
+  }
+>
+  <WeatherData>
+    <ul
+      className="city-list"
+    >
+      <li
+        className="city-element"
+        key="Sarkhej"
+      >
+        <City
+          cityData={
+            Object {
+              "country": "IN",
+              "icon": "50d",
+              "latitude": 23.0439,
+              "longitude": 72.5086,
+              "maxTemp": 31.04,
+              "minTemp": 31.04,
+              "name": "Sarkhej",
+              "temp": 31.04,
+            }
+          }
+        >
+          <article
+            className="city"
+            onClick={[Function]}
+          >
+            <div
+              className="column-1"
+            >
+              <div
+                className="name"
+              >
+                Sarkhej
+                <img
+                  className="flag"
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                />
+              </div>
+            </div>
+            <div
+              className="column-2"
+            >
+              <div
+                className="temp"
+              >
+                <span
+                  className="units"
+                >
+                  31.04
+                </span>
+                <span
+                  className="metrics"
+                >
+                  °C
+                </span>
+              </div>
+            </div>
+            <button
+              className="cancel-button"
+              onClick={[Function]}
+            >
+              <p
+                className="icon-cancel"
+              >
+                x
+              </p>
+            </button>
+          </article>
+        </City>
+      </li>
+      <li
+        className="city-element"
+        key="Pune"
+      >
+        <City
+          cityData={
+            Object {
+              "country": "IN",
+              "icon": "50d",
+              "latitude": 21.0439,
+              "longitude": 74.5086,
+              "maxTemp": 31.04,
+              "minTemp": 33.04,
+              "name": "Pune",
+              "temp": 32.04,
+            }
+          }
+        >
+          <article
+            className="city"
+            onClick={[Function]}
+          >
+            <div
+              className="column-1"
+            >
+              <div
+                className="name"
+              >
+                Pune
+                <img
+                  className="flag"
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                />
+              </div>
+            </div>
+            <div
+              className="column-2"
+            >
+              <div
+                className="temp"
+              >
+                <span
+                  className="units"
+                >
+                  32.04
+                </span>
+                <span
+                  className="metrics"
+                >
+                  °C
+                </span>
+              </div>
+            </div>
+            <button
+              className="cancel-button"
+              onClick={[Function]}
+            >
+              <p
+                className="icon-cancel"
+              >
+                x
+              </p>
+            </button>
+          </article>
+        </City>
+      </li>
+    </ul>
+  </WeatherData>
+</GlobalProvider>
+`;

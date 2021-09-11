@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the SearchCity component 1`] = `
+<GlobalProvider
+  initialState={
+    Object {
+      "city": Array [],
+      "data": Object {},
+      "error": "",
+      "errorHandler": [Function],
+      "removeCityHandler": [Function],
+      "resetSetErrorHandler": [Function],
+      "searchByCityHandler": [Function],
+      "searchCityHandler": [Function],
+      "setWeatherDataHandler": [Function],
+    }
+  }
+>
+  <SearchCity>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="pseudo-search"
+      >
+        <input
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Search City"
+          required={true}
+          type="text"
+          value=""
+        />
+        <button
+          className="fa fa-search"
+          type="submit"
+        />
+      </div>
+    </form>
+  </SearchCity>
+</GlobalProvider>
+`;

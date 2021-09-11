@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Case For AppTitle renders the APP component 1`] = `
+<Navbar
+  bg-transparent={true}
+  collapseOnSelect={false}
+  expand="lg"
+  variant="light"
+>
+  <NavbarBrand
+    className="text-white app__title"
+    href="#"
+  >
+    <span>
+      <img
+        className="weather__logo"
+        src="weather-app.png"
+      />
+    </span>
+    Weather App
+  </NavbarBrand>
+</Navbar>
+`;

@@ -1,0 +1,11 @@
+.city-list {
+  list-style-type: none;
+  margin: 20px 20px 0;
+  padding: 0;
+  color: #fff;
+}
+
+.city-list .city-element {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the APP component 1`] = `
+<div
+  className="App"
+>
+  <Toaster
+    position="top-center"
+    toastOptions={
+      Object {
+        "duration": 5000,
+        "style": Object {
+          "background": "#fff",
+          "borderRadius": "10px",
+          "color": "#000",
+          "padding": "1rem",
+        },
+      }
+    }
+  />
+  <AppTitle />
+  <SearchCity />
+  <WeatherData />
+</div>
+`;
+
+exports[`renders the component 1`] = `
+<div
+  className="App"
+>
+  <Toaster
+    position="top-center"
+    toastOptions={
+      Object {
+        "duration": 5000,
+        "style": Object {
+          "background": "#fff",
+          "borderRadius": "10px",
+          "color": "#000",
+          "padding": "1rem",
+        },
+      }
+    }
+  />
+  <AppTitle />
+  <SearchCity />
+  <WeatherData />
+</div>
+`;

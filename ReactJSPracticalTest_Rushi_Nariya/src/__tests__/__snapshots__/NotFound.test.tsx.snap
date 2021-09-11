@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the NotFound Component 1`] = `
+<Fragment>
+  <article
+    className="city"
+  >
+    <div
+      className="column-1 not-found"
+    >
+      No cities Found!
+    </div>
+  </article>
+</Fragment>
+`;
+
+exports[`renders the component 1`] = `
+<Fragment>
+  <article
+    className="city"
+  >
+    <div
+      className="column-1 not-found"
+    >
+      No cities Found!
+    </div>
+  </article>
+</Fragment>
+`;

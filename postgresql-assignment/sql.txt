@@ -1,0 +1,297 @@
+-- public.resources definition
+
+-- Drop table
+
+-- DROP TABLE public.resources;
+
+CREATE TABLE public.resources (
+	resources_id int4 NOT NULL,
+	resources_name varchar NULL,
+	CONSTRAINT resources_pkey PRIMARY KEY (resources_id)
+);
+
+
+-- public.roles definition
+
+-- Drop table
+
+-- DROP TABLE public.roles;
+
+CREATE TABLE public.roles (
+	id int4 NOT NULL DEFAULT nextval('"Roles_id_seq"'::regclass),
+	"name" varchar(30) NULL,
+	CONSTRAINT "Roles_pkey" PRIMARY KEY (id)
+);
+
+
+-- public.states definition
+
+-- Drop table
+
+-- DROP TABLE public.states;
+
+CREATE TABLE public.states (
+	id int4 NOT NULL DEFAULT nextval('"States_id_seq"'::regclass),
+	"name" varchar(30) NULL,
+	CONSTRAINT "States_pkey" PRIMARY KEY (id)
+);
+
+
+-- public.api_methods definition
+
+-- Drop table
+
+-- DROP TABLE public.api_methods;
+
+CREATE TABLE public.api_methods (
+	method_id int4 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	method_name varchar NOT NULL,
+	CONSTRAINT api_methods_pk PRIMARY KEY (method_id)
+);
+
+
+-- public.address definition
+
+-- Drop table
+
+-- DROP TABLE public.address;
+
+CREATE TABLE public.address (
+	id int4 NOT NULL DEFAULT nextval('"Address_id_seq"'::regclass),
+	house varchar(30) NULL,
+	street varchar(50) NULL,
+	locality varchar(50) NULL,
+	city varchar(30) NULL,
+	state_id int4 NULL,
+	pincode int4 NULL,
+	CONSTRAINT "Address_pkey" PRIMARY KEY (id),
+	CONSTRAINT "Address_state_id_fkey" FOREIGN KEY (state_id) REFERENCES states(id)
+);
+
+
+-- public.hospitals definition
+
+-- Drop table
+
+-- DROP TABLE public.hospitals;
+
+CREATE TABLE public.hospitals (
+	id int4 NOT NULL DEFAULT nextval('"Hospitals_id_seq"'::regclass),
+	"name" varchar(50) NULL,
+	address_id int4 NULL,
+	contact_no varchar(15) NULL,
+	email varchar(80) NULL,
+	website varchar(80) NULL,
+	hours_of_operation varchar(50) NULL,
+	diseases varchar(500) NULL,
+	CONSTRAINT "Hospitals_pkey" PRIMARY KEY (id),
+	CONSTRAINT "Hospitals_address_id_fkey" FOREIGN KEY (address_id) REFERENCES address(id),
+	CONSTRAINT "Hospitals_address_id_fkey1" FOREIGN KEY (address_id) REFERENCES address(id)
+);
+
+
+-- public.permissions definition
+
+-- Drop table
+
+-- DROP TABLE public.permissions;
+
+CREATE TABLE public.permissions (
+	permission_id int4 NOT NULL,
+	role_id int4 NULL,
+	resources_id int4 NULL,
+	permissions_method_id int4 NULL,
+	CONSTRAINT permissions_pkey PRIMARY KEY (permission_id),
+	CONSTRAINT permissions_method_fk FOREIGN KEY (permissions_method_id) REFERENCES api_methods(method_id),
+	CONSTRAINT permissions_resources_id_fkey FOREIGN KEY (resources_id) REFERENCES resources(resources_id),
+	CONSTRAINT permissions_role_id_fkey FOREIGN KEY (role_id) REFERENCES roles(id)
+);
+
+
+-- public.users definition
+
+-- Drop table
+
+-- DROP TABLE public.users;
+
+CREATE TABLE public.users (
+	id int4 NOT NULL DEFAULT nextval('"Users_id_seq"'::regclass),
+	firstname varchar(30) NULL,
+	lastname varchar(30) NULL,
+	email varchar(80) NULL,
+	phone varchar(15) NULL,
+	birthdate date NULL,
+	address_id int4 NULL,
+	"password" varchar(100) NULL,
+	role_id int4 NULL,
+	is_active bool NULL,
+	CONSTRAINT "Users_pkey" PRIMARY KEY (id),
+	CONSTRAINT "Users_address_id_fkey" FOREIGN KEY (address_id) REFERENCES address(id),
+	CONSTRAINT "Users_role_id_fkey" FOREIGN KEY (role_id) REFERENCES roles(id)
+);
+
+
+-- public.announcements definition
+
+-- Drop table
+
+-- DROP TABLE public.announcements;
+
+CREATE TABLE public.announcements (
+	id int4 NOT NULL DEFAULT nextval('"Announcements_id_seq"'::regclass),
+	hospital_admin_id int4 NULL,
+	hospital_id int4 NULL,
+	title varchar(100) NULL,
+	body varchar(1000) NULL,
+	is_active bool NULL,
+	CONSTRAINT "Announcements_pkey" PRIMARY KEY (id),
+	CONSTRAINT "Announcements_hospital_admin_id_fkey" FOREIGN KEY (hospital_admin_id) REFERENCES users(id),
+	CONSTRAINT "Announcements_hospital_id_fkey" FOREIGN KEY (hospital_id) REFERENCES hospitals(id)
+);
+
+
+-- public.doctor_appointments definition
+
+-- Drop table
+
+-- DROP TABLE public.doctor_appointments;
+
+CREATE TABLE public.doctor_appointments (
+	id int4 NOT NULL DEFAULT nextval('"Doctor_Appointments_id_seq"'::regclass),
+	doctor_id int4 NULL,
+	appointment_date date NULL,
+	start_time time NULL,
+	end_time time NULL,
+	patient_id int4 NULL,
+	CONSTRAINT "Doctor_Appointments_pkey" PRIMARY KEY (id),
+	CONSTRAINT "Doctor_Appointments_doctor_id_fkey" FOREIGN KEY (doctor_id) REFERENCES users(id),
+	CONSTRAINT "Doctor_Appointments_patient_id_fkey" FOREIGN KEY (patient_id) REFERENCES users(id)
+);
+
+
+-- public.doctors definition
+
+-- Drop table
+
+-- DROP TABLE public.doctors;
+
+CREATE TABLE public.doctors (
+	user_id int4 NOT NULL,
+	hospital_id int4 NULL,
+	education varchar(200) NULL,
+	specialities varchar(200) NULL,
+	CONSTRAINT "Doctors_pkey" PRIMARY KEY (user_id),
+	CONSTRAINT "Doctors_hospital_id_fkey" FOREIGN KEY (hospital_id) REFERENCES hospitals(id),
+	CONSTRAINT "Doctors_user_id_fkey" FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+
+-- public.hospital_admins definition
+
+-- Drop table
+
+-- DROP TABLE public.hospital_admins;
+
+CREATE TABLE public.hospital_admins (
+	user_id int4 NOT NULL,
+	hospital_id int4 NOT NULL,
+	CONSTRAINT "HospitalAdmins_pkey" PRIMARY KEY (user_id, hospital_id),
+	CONSTRAINT "HospitalAdmins_hospital_id_fkey" FOREIGN KEY (hospital_id) REFERENCES hospitals(id),
+	CONSTRAINT "HospitalAdmins_user_id_fkey" FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+
+-- public.notes definition
+
+-- Drop table
+
+-- DROP TABLE public.notes;
+
+CREATE TABLE public.notes (
+	id int4 NOT NULL DEFAULT nextval('"Notes_id_seq"'::regclass),
+	admin_id int4 NULL,
+	title varchar(100) NULL,
+	body varchar(1000) NULL,
+	is_active bool NULL,
+	CONSTRAINT "Notes_pkey" PRIMARY KEY (id),
+	CONSTRAINT "Notes_admin_id_fkey" FOREIGN KEY (admin_id) REFERENCES users(id)
+);
+
+
+-- public.patient_appointments definition
+
+-- Drop table
+
+-- DROP TABLE public.patient_appointments;
+
+CREATE TABLE public.patient_appointments (
+	id int4 NOT NULL DEFAULT nextval('"Patient_Appointments_id_seq"'::regclass),
+	patient_id int4 NULL,
+	hospital_id int4 NULL,
+	doctor_id int4 NULL,
+	appointment_date date NULL,
+	start_time time NULL,
+	end_time time NULL,
+	follow_up bool NULL,
+	CONSTRAINT "Patient_Appointments_pkey" PRIMARY KEY (id),
+	CONSTRAINT "Patient_Appointments_doctor_id_fkey" FOREIGN KEY (doctor_id) REFERENCES users(id),
+	CONSTRAINT "Patient_Appointments_hospital_id_fkey" FOREIGN KEY (hospital_id) REFERENCES hospitals(id),
+	CONSTRAINT "Patient_Appointments_patient_id_fkey" FOREIGN KEY (patient_id) REFERENCES users(id)
+);
+
+
+-- public.patient_diagnose definition
+
+-- Drop table
+
+-- DROP TABLE public.patient_diagnose;
+
+CREATE TABLE public.patient_diagnose (
+	appointment_id int4 NOT NULL,
+	disease varchar(500) NULL,
+	prescription varchar(1000) NULL,
+	CONSTRAINT "Patient_Diagnose_pkey" PRIMARY KEY (appointment_id),
+	CONSTRAINT "Patient_Diagnose_appointment_id_fkey" FOREIGN KEY (appointment_id) REFERENCES patient_appointments(id)
+);
+
+
+-- public.patients definition
+
+-- Drop table
+
+-- DROP TABLE public.patients;
+
+CREATE TABLE public.patients (
+	user_id int4 NOT NULL,
+	weight float8 NULL,
+	height float8 NULL,
+	diseases varchar(500) NULL,
+	sc_name varchar(50) NULL,
+	sc_email varchar(80) NULL,
+	admit_status bool NULL,
+	CONSTRAINT "Patients_pkey" PRIMARY KEY (user_id),
+	CONSTRAINT "Patients_user_id_fkey" FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+
+-- public.query_concerns definition
+
+-- Drop table
+
+-- DROP TABLE public.query_concerns;
+
+CREATE TABLE public.query_concerns (
+	id int4 NOT NULL DEFAULT nextval('"QueryConcerns_id_seq"'::regclass),
+	patient_id int4 NULL,
+	query varchar(1000) NULL,
+	hospital_id int4 NULL,
+	doctor_needed bool NULL DEFAULT false,
+	doctor_id int4 NULL,
+	is_answered bool NULL DEFAULT false,
+	answer varchar(1000) NULL,
+	is_deleted bool NULL,
+	CONSTRAINT "QueryConcerns_pkey" PRIMARY KEY (id),
+	CONSTRAINT "QueryConcerns_doctor_id_fkey" FOREIGN KEY (doctor_id) REFERENCES users(id),
+	CONSTRAINT "QueryConcerns_hospital_id_fkey" FOREIGN KEY (hospital_id) REFERENCES hospitals(id),
+	CONSTRAINT "QueryConcerns_patient_id_fkey" FOREIGN KEY (patient_id) REFERENCES users(id)
+);

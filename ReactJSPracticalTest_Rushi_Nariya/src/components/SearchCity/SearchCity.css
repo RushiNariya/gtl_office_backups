@@ -1,0 +1,88 @@
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+
+form {
+  display: inline-block;
+  margin: 1rem auto 0;
+}
+
+.pseudo-search {
+  display: inline;
+  position: relative;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 10px 15px;
+  transition: 0.5 ease-in-out;
+  outline: none;
+}
+
+input {
+  border: 0;
+  color: #fff;
+  background-color: transparent;
+  width: 400px;
+}
+
+input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  input {
+    width: 240px;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  color: white;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+select {
+  border: none;
+}
+
+.no-suggestions {
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.suggestions {
+  position: relative;
+  border: 1px solid #999;
+  color: #fff;
+  font-size: 1.2rem;
+  border-top-width: 0;
+  list-style: none;
+  margin-top: 5px;
+  max-height: 143px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-left: 0;
+  width: inherit;
+}
+
+.suggestions::-webkit-scrollbar {
+  display: none;
+}
+.suggestions li {
+  padding: 0.5rem;
+}
+
+.suggestion-active,
+.suggestions li:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.suggestions li:not(:last-of-type) {
+  border-bottom: 1px solid #999;
+}
